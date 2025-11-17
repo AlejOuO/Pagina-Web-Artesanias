@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Detalle de Producto - {{ producto.nombre }}{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'productos' %}">Productos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ producto.nombre }}</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            {% if producto.imagen %}
+                <img src="{{ producto.imagen.url }}" class="img-fluid rounded shadow-sm" alt="{{ producto.nombre }}">
+            {% else %}
+                <img src="{% static 'tienda/img/placeholder_categoria.jpg' %}" class="img-fluid rounded shadow-sm" alt="Imagen no disponible">
+            {% endif %}
+        </div>
+        <div class="col-md-6 mb-4">
+            <h1 class="mb-3">{{ producto.nombre }}</h1>
+            <p class="lead"><strong>COP ${{ producto.precio|floatformat:0 }}</strong></p>
+            <p><strong>Categoría:</strong> <a href="{% url 'productos' %}?categoria={{ producto.categoria.slug }}">{{ producto.categoria.nombre }}</a></p>
+            {% if producto.region %}
+                <p><strong>Región:</strong> <a href="{% url 'productos' %}?region={{ producto.region.slug }}">{{ producto.region.nombre }}</a></p>
+            {% endif %}
+            {% if producto.artesano %}
+                <p><strong>Artesano:</strong> <a href="{% url 'sobre_nosotros' %}#artesano-{{ producto.artesano.id }}">{{ producto.artesano.nombre }}</a></p>
+            {% endif %}
+            <p><strong>Disponibilidad:</strong>
+                {% if producto.stock > 0 %}
+                    <span class="badge bg-success">En Stock ({{ producto.stock }} unidades)</span>
+                {% else %}
+                    <span class="badge bg-danger">Agotado</span>
+                {% endif %}
+            </p>
+
+            <h3 class="mt-4">Descripción</h3>
+            <p>{{ producto.descripcion|linebreaksbr }}</p>
+
+            {% if producto.stock > 0 %}
+                <button class="btn btn-primary btn-lg mt-3">Añadir al Carrito (Funcion en un futuro lejano)</button>
+            {% else %}
+                <button class="btn btn-secondary btn-lg mt-3" disabled>Producto Agotado</button>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="mt-5 pt-4 border-top">
+        <h2 class="mb-4">Información Adicional</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Características Principales</h5>
+                <ul class="list-unstyled"> {# el list-unstyled para quitar los puntos de la lista por defecto #}
+                    {% if producto.material %}
+                        <li><strong>Material:</strong> {{ producto.material }}</li>
+                    {% endif %}
+                    {% if producto.dimensiones %}
+                        <li><strong>Dimensiones:</strong> {{ producto.dimensiones }}</li>
+                    {% endif %}
+                    {% if producto.tecnica %}
+                        <li><strong>Técnica:</strong> {{ producto.tecnica }}</li>
+                    {% endif %}
+
+                    {# se muestra ese mensaje si el campo tiene un valor #}
+                    {% if not producto.material and not producto.dimensiones and not producto.tecnica %}
+                        <li>No se han especificado características principales para este producto.</li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>Cuidado del Producto</h5>
+                {% if producto.cuidado_producto %}
+
+                    {# se usa el filtro linebreaksbr para que los saltos de línea se muestren correctamente #}
+                    <p>{{ producto.cuidado_producto|linebreaksbr }}</p>
+                {% else %}
+                    <p>No se han especificado instrucciones de cuidado para este producto.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

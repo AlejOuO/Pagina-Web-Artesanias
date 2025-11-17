@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sobre Nosotros - JABIEIYE{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4 text-center">Sobre JABIEIYE</h1>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="{% static 'tienda/img/artesano_ejemplo_2.jpg' %}" class="img-fluid rounded shadow-sm" alt="Historia de la empresa">
+        </div>
+        <div class="col-md-6">
+            <h2>Nuestra Historia y Misión</h2>
+            <p>JABIEIYE nació de un profundo amor por la riqueza cultural de Colombia y el deseo de conectar a los artesanos tradicionales con un público más amplio. Fundada en 2025, nuestra misión es doble: por un lado, ofrecer productos únicos y de alta calidad que reflejen el alma de nuestras comunidades; por otro, asegurar un comercio justo que empodere a los creadores y preserve sus técnicas ancestrales.</p>
+            <p>Creemos firmemente en el valor del trabajo hecho a mano, en la sabiduría transmitida de generación en generación y en la sostenibilidad de las prácticas artesanales. Cada compra que realizas contribuye directamente a estas comunidades, permitiendo que su arte y sus tradiciones perduren.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="mb-4 text-center">Conoce a Nuestros Artesanos</h2>
+    {% if artesanos %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for artesano in artesanos %}
+                <div class="col" id="artesano-{{ artesano.id }}">
+                    <div class="card h-100 shadow-sm">
+                        {% if artesano.imagen %}
+                            <img src="{{ artesano.imagen.url }}" class="card-img-top" alt="{{ artesano.nombre }}" style="height: 250px; object-fit: cover;">
+                        {% else %}
+                            <img src="{% static 'tienda/img/artesano_ejemplo_3.jpg' %}" class="card-img-top" alt="Imagen de artesano no disponible" style="height: 250px; object-fit: cover;">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ artesano.nombre }}</h5>
+                            {% if artesano.region %}
+                                <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> {{ artesano.region.nombre }}</p>
+                            {% endif %}
+                            <p class="card-text">{{ artesano.biografia|truncatechars:150 }}</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto disabled" aria-disabled="true">Ver perfil completo (próximamente)</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-info text-center" role="alert">
+            No hay información de artesanos disponible en este momento.
+        </div>
+    {% endif %}
+
+    <div class="mt-5 text-center">
+        <h2 class="mb-3">Nuestro Compromiso</h2>
+        <p class="lead">Nos comprometemos con la autenticidad, la calidad y el impacto social. Cada pieza es una obra de arte y un puente cultural.</p>
+        <p>¡Gracias por ser parte de nuestra historia!</p>
+    </div>
+{% endblock %}

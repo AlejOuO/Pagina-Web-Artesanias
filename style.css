@@ -1,0 +1,298 @@
+/* Importación de Google Fonts (aunque ya está en base.html, es buena práctica tenerlo aquí también por si acaso) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* General Body Styles */
+body {
+    font-family: 'Lato', sans-serif; /* Fuente principal para el cuerpo */
+    color: #333;
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef); /* Degradado más dinámico */
+    min-height: 100vh; /* Asegura que el gradiente ocupe toda la altura */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Hace que el contenido principal ocupe el espacio restante */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #6a1a45; /* Morado oscuro para la barra de navegación */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    padding: 0.8rem 1rem; /* Más padding vertical */
+}
+.navbar-brand {
+    font-family: 'Poppins', sans-serif; /* Fuente para el logo */
+    font-weight: 700;
+    font-size: 1.8rem; /* Tamaño del logo */
+    color: #ffffff !important;
+    transition: color 0.3s ease; /* Transición para el hover */
+}
+.navbar-brand:hover {
+    color: #e0e0e0 !important;
+}
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500; /* Peso de la fuente ajustado */
+    transition: color 0.3s ease, transform 0.2s ease; /* Transición para el hover */
+}
+.nav-link:hover {
+    color: #f2f2f2 !important; /* Color más claro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño desplazamiento hacia arriba */
+}
+
+/*Para el logo*/
+.navbar-brand .navbar-logo {
+    height: 50px;      
+    width: 60px;       
+    margin-right: 6px;
+}
+
+/*asegura que el logo y el texto estén alineados*/ 
+.navbar-brand {
+    display: flex;       
+    align-items: center; 
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #6a1a45; /* Mismo color que la barra de navegación */
+    color: #ffffff;
+    padding: 30px 0; /* Más padding */
+    margin-top: 50px; /* Más margen superior */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15); /* Sombra hacia arriba */
+}
+.footer h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.footer ul {
+    padding-left: 0;
+}
+.footer ul li {
+    margin-bottom: 8px;
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer a:hover {
+    color: #e0e0e0;
+}
+.footer .fab {
+    font-size: 1.5rem; /* Tamaño de los iconos de redes sociales */
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+.footer .fab:hover {
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el ratón */
+}
+
+
+/* Card and Image Hover Effects */
+.card {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border-radius: 12px; /* Bordes más redondeados */
+    overflow: hidden;
+    border: none; /* Elimina el borde predeterminado de Bootstrap */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra inicial más suave */
+}
+.card:hover {
+    transform: translateY(-8px); /* Desplazamiento más pronunciado */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Sombra más intensa al pasar el ratón */
+}
+.card-img-top {
+    max-height: 220px; /* Altura máxima ligeramente mayor */
+    object-fit: cover;
+    border-top-left-radius: 12px; /* Coincide con el radio de la tarjeta */
+    border-top-right-radius: 12px;
+}
+.card-body {
+    padding: 1.5rem; /* Más padding interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #6a1a45; /* Color del título de la tarjeta */
+}
+.card-text strong {
+    color: #8c3b6d; /* Color del precio */
+    font-size: 1.1rem;
+}
+
+
+/* Button Styles */
+.btn-primary {
+    background-color: #8c3b6d; /* Un morado un poco más claro para botones */
+    border-color: #8c3b6d;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 8px; 
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: #a05a81; 
+    border-color: #a05a81;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+.btn-outline-primary {
+    color: #8c3b6d;
+    border-color: #8c3b6d;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+.btn-outline-primary:hover {
+    background-color: #8c3b6d;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.btn-outline-secondary { 
+    color: #6c757d;
+    border-color: #6c757d;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border-radius: 8px;
+}
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+    border-color: #6c757d;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: #a05a81;
+    box-shadow: 0 0 0 0.25rem rgba(160, 90, 129, 0.25);
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 450px; /* Altura del banner ligeramente mayor */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra de texto más fuerte */
+    text-align: center;
+    border-radius: 18px; /* Bordes más redondeados para el banner */
+    margin-bottom: 40px; /* Más margen inferior */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para el banner */
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura más pronunciada */
+    border-radius: 18px;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif; /* Fuente para el título principal */
+    font-size: 4.2rem; /* Tamaño de fuente más grande */
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+.hero-content p {
+    font-size: 1.8rem; /* Tamaño de fuente más grande */
+    margin-bottom: 30px;
+    font-weight: 300; /* Peso de fuente más ligero */
+}
+
+/* Estilos específicos para la paginación */
+.pagination .page-link {
+    color: #6a1a45;
+    border-color: #6a1a45; /* Borde del mismo color */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.pagination .page-item.active .page-link {
+    background-color: #6a1a45;
+    border-color: #6a1a45;
+    color: #ffffff;
+}
+.pagination .page-link:hover {
+    background-color: #8c3b6d; /* Fondo al pasar el ratón */
+    color: #ffffff;
+    border-color: #8c3b6d;
+}
+
+/* Titulos de sección */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #6a1a45; /* Color para los títulos de sección */
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+/* Custom styles for Artesano Image (Square) */
+.artesano-cuadro {
+    width: 100%;
+    height: 400px; /* Altura fija para hacerla cuadrada (ajustar si es necesario) */
+    display: block;
+    object-fit: cover;
+    border-radius: 12px; /* Bordes redondeados */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.artesano-cuadro:hover {
+    transform: scale(1.02); /* Ligeramente más grande al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Featurette section padding (for "Nuestra Misión" and "Nuestra Historia") */
+.featurette {
+    padding: 3rem 0; /* Añade espaciado superior e inferior a la sección */
+}
+
+/* Estilos para la sección Explora por Categoría */
+.category-item {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Asegura que la tarjeta de categoría ocupe toda la altura disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.category-item img {
+    border: 4px solid #e0e0e0; /* Borde suave alrededor de la imagen */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+.category-item:hover img {
+    border-color: #8c3b6d; /* Borde más pronunciado al pasar el ratón */
+}
+.category-item h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #6a1a45;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
