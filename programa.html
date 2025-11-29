@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Programa de Capacitación - JABIEIYE{% endblock %}
+
+{% block content %}
+    {# Hero Section #}
+    <header class="hero-section animate-on-scroll" style="background: linear-gradient(rgba(27, 77, 62, 0.85), rgba(45, 122, 79, 0.85)), url('{% static 'img/fondo.png' %}'); background-size: cover; background-position: center; height: 300px;">
+        <div class="hero-content">
+            <h1 class="display-4" style="color: #ffffff; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);">Programa de Capacitación</h1>
+            <p class="lead" style="color: #f0fdf4; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);">Fortalecimiento del Talento Artesanal y Cultural</p>
+        </div>
+    </header>
+
+    {# Programa Principal #}
+    <section class="my-5 animate-on-scroll">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    
+                    {# Introducción #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Introducción</h2>
+                            <p class="lead">El sector artesanal representa un pilar fundamental en la economía cultural y el patrimonio inmaterial de nuestras comunidades. Sin embargo, enfrenta desafíos significativos en un contexto de globalización, cambio climático y transformaciones en los patrones de consumo.</p>
+                            <p>Para asegurar la viabilidad y relevancia del oficio artesanal en el siglo XXI, es imperativo equipar a los artesanos con conocimientos, herramientas y perspectivas que les permitan innovar sin perder su esencia.</p>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h5>Población Objetivo</h5>
+                                    <ul>
+                                        <li>Artesanos independientes y asociados</li>
+                                        <li>Emprendedores del sector cultural</li>
+                                        <li>Personas interesadas en proyectos artesanales sostenibles</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Duración Total</h5>
+                                    <p><strong>3 módulos de 20 minutos cada uno = 60 minutos de capacitación</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Objetivos #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Objetivos del Programa</h2>
+                            
+                            <h4 class="text-primary">Objetivo General</h4>
+                            <p class="mb-4">Fortalecer las capacidades técnicas, éticas y creativas de los artesanos para que desarrollen prácticas sostenibles, preserven saberes culturales y diseñen productos innovadores que respondan a las demandas del mercado contemporáneo.</p>
+                            
+                            <h4 class="text-primary">Objetivos Específicos</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="text-center p-3 border rounded">
+                                        <i class="fas fa-recycle fa-2x text-primary mb-3"></i>
+                                        <h6>Economía Circular</h6>
+                                        <small>Reducción de residuos y optimización de recursos</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="text-center p-3 border rounded">
+                                        <i class="fas fa-hands-helping fa-2x text-primary mb-3"></i>
+                                        <h6>Saberes Indígenas</h6>
+                                        <small>Apropiación respetuosa y colaboración ética</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="text-center p-3 border rounded">
+                                        <i class="fas fa-leaf fa-2x text-primary mb-3"></i>
+                                        <h6>Diseño Sostenible</h6>
+                                        <small>Integración de sostenibilidad en el proceso creativo</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Módulos #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Módulos de Capacitación</h2>
+                            
+                            <div class="module-item mb-4 p-4 border-start border-4 border-primary">
+                                <h4 class="text-primary">Módulo 1: Economía Circular Aplicada a Artesanías</h4>
+                                <p><strong>Duración:</strong> 20 minutos</p>
+                                <p><strong>Contenido:</strong> Principios de economía circular, estrategias de reducción de residuos, optimización de recursos, casos de éxito aplicados al sector artesanal.</p>
+                            </div>
+                            
+                            <div class="module-item mb-4 p-4 border-start border-4 border-success">
+                                <h4 class="text-success">Módulo 2: Apropiación y Preservación de Saberes Indígenas</h4>
+                                <p><strong>Duración:</strong> 20 minutos</p>
+                                <p><strong>Contenido:</strong> Diferencia entre apropiación indebida y respetuosa, cinco pilares de la colaboración ética, estrategias de preservación cultural.</p>
+                            </div>
+                            
+                            <div class="module-item p-4 border-start border-4 border-info">
+                                <h4 class="text-info">Módulo 3: Diseño Artesanal Sostenible</h4>
+                                <p><strong>Duración:</strong> 20 minutos</p>
+                                <p><strong>Contenido:</strong> Tres dimensiones de la sostenibilidad, siete principios del diseño sostenible, herramientas prácticas de implementación.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Metodología #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Metodología</h2>
+                            <p><strong>Modalidad de Entrega:</strong> Video capacitaciones grabadas</p>
+                            <p><strong>Enfoque Pedagógico:</strong> Aprendizaje experiencial y aplicado que combina:</p>
+                            <ul>
+                                <li>Exposición teórica de conceptos fundamentales</li>
+                                <li>Ejemplos reales y casos de éxito</li>
+                                <li>Reflexión crítica y autoanálisis</li>
+                                <li>Aplicación práctica inmediata</li>
+                                <li>Evaluación formativa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {# Certificación #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Certificación</h2>
+                            <div class="text-center">
+                                <i class="fas fa-award fa-4x text-warning mb-3"></i>
+                                <h4>Certificado de Participación</h4>
+                                <p class="lead">Los participantes que completen las tres capacitaciones y la evaluación final con puntaje mínimo de 70/100 recibirán un certificado que acredita:</p>
+                                <div class="row mt-4">
+                                    <div class="col-md-4">
+                                        <i class="fas fa-clock fa-2x text-primary"></i>
+                                        <p>60 minutos de capacitación</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <i class="fas fa-check-circle fa-2x text-primary"></i>
+                                        <p>Evaluación satisfactoria</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                                        <p>Formación especializada</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# CTA #}
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary btn-lg me-3">Inscribirse al Programa</a>
+                        <a href="{% url 'capacitaciones' %}" class="btn btn-outline-primary btn-lg">Volver a Capacitaciones</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

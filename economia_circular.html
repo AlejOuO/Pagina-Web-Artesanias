@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Economía Circular - Capacitaciones JABIEIYE{% endblock %}
+
+{% block content %}
+    {# Hero Section #}
+    <header class="hero-section animate-on-scroll" style="background: linear-gradient(rgba(39, 87, 67, 0.85), rgba(45, 122, 79, 0.85)), url('{% static 'img/fondo.png' %}'); background-size: cover; background-position: center; height: 300px;">
+        <div class="hero-content">
+            <h1 class="display-4" style="color: #ffffff; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);">Economía Circular Aplicada a Artesanías</h1>
+            <p class="lead" style="color: #f0fdf4; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);">Módulo 1 - Transformando residuos en recursos</p>
+        </div>
+    </header>
+
+    {# Información del Módulo #}
+    <section class="my-5 animate-on-scroll">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    
+                    {# Resumen del Módulo #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-clock text-primary me-2"></i>Duración</h5>
+                                    <p>20 minutos</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-play-circle text-primary me-2"></i>Modalidad</h5>
+                                    <p>Video capacitación</p>
+                                </div>
+                            </div>
+                            <p class="lead">Aprende estrategias prácticas para reducir residuos, optimizar recursos y aumentar rentabilidad mediante principios de economía circular aplicados específicamente al trabajo artesanal.</p>
+                        </div>
+                    </div>
+
+                    {# Contenido de la Capacitación #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Contenido de la Capacitación</h2>
+                            
+                            {# Bloque 1: Introducción #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3"> Introducción y Bienvenida</h4>
+                                <div class="ps-4">
+                                    <p><strong>"Muy buenos días/tardes a todos y todas. Mi nombre es Saray Barrera de JABIEIYE y es un placer darles la bienvenida a esta capacitación sobre Economía Circular Aplicada a Artesanías."</strong></p>
+                                    <p>Durante esta capacitación aprenderemos:</p>
+                                    <ul>
+                                        <li>Qué es la economía circular y por qué es importante para artesanos</li>
+                                        <li>Cómo aplicar sus principios en talleres y espacios de producción</li>
+                                        <li>Estrategias prácticas para reducir residuos y aumentar rentabilidad</li>
+                                        <li>Casos de éxito que pueden inspirar su propio camino</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {# Bloque 2: Problemática #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3"> Contexto y Problemática Actual</h4>
+                                <div class="ps-4">
+                                    <p><strong>El modelo económico tradicional:</strong> Economía lineal (Extraer → Producir → Usar → Desechar)</p>
+                                    <div class="alert alert-warning">
+                                        <h6>Consecuencias del modelo lineal:</h6>
+                                        <ul class="mb-0">
+                                            <li>Agotamiento de recursos naturales</li>
+                                            <li>Acumulación de residuos en vertederos</li>
+                                            <li>Contaminación de agua, aire y suelo</li>
+                                            <li>Pérdida económica por materiales desperdiciados</li>
+                                        </ul>
+                                    </div>
+                                    <p><strong>En el sector artesanal esto se refleja en:</strong></p>
+                                    <ul>
+                                        <li>Retazos de tela que van a la basura</li>
+                                        <li>Aserrín y virutas de madera desperdiciados</li>
+                                        <li>Tintes y barnices que contaminan aguas</li>
+                                        <li>Productos diseñados sin pensar en su fin de vida</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {# Bloque 3: Qué es Economía Circular #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3"> ¿Qué es la Economía Circular?</h4>
+                                <div class="ps-4">
+                                    <p>Sistema económico que busca <strong>cerrar el ciclo de vida</strong> de productos, servicios, residuos, materiales, agua y energía.</p>
+                                    
+                                    <div class="row mt-4">
+                                        <div class="col-md-4 text-center mb-3">
+                                            <div class="p-3 border rounded">
+                                                <i class="fas fa-ban fa-2x text-danger mb-2"></i>
+                                                <h6>1. Eliminar Residuos</h6>
+                                                <small>Diseñar para minimizar desperdicios desde el inicio</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-center mb-3">
+                                            <div class="p-3 border rounded">
+                                                <i class="fas fa-sync-alt fa-2x text-warning mb-2"></i>
+                                                <h6>2. Mantener en Uso</h6>
+                                                <small>Reparar, reutilizar, remanufacturar</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-center mb-3">
+                                            <div class="p-3 border rounded">
+                                                <i class="fas fa-seedling fa-2x text-success mb-2"></i>
+                                                <h6>3. Regenerar Sistemas</h6>
+                                                <small>Devolver nutrientes, usar materiales biodegradables</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 4: Estrategias Prácticas #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">7 Estrategias Prácticas para Artesanos</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="strategy-item mb-4 p-3 border-start border-3 border-primary">
+                                        <h5>1. Auditoría de Residuos</h5>
+                                        <p><strong>Primer paso:</strong> Conocer qué estás desperdiciando.</p>
+                                        <p>Durante una semana, separa y pesa todos tus residuos por categoría. Muchos artesanos descubren que desechan el 30-40% de sus materias primas.</p>
+                                    </div>
+
+                                    <div class="strategy-item mb-4 p-3 border-start border-3 border-success">
+                                        <h5>2. Diseño de Aprovechamiento Total</h5>
+                                        <p>Reorganiza patrones y procesos para maximizar el uso de materiales.</p>
+                                        <p><strong>Ejemplos:</strong> Teselado en patrones textiles, planificar piezas grandes y pequeñas en madera, reciclar barro en cerámica.</p>
+                                    </div>
+
+                                    <div class="strategy-item mb-4 p-3 border-start border-3 border-info">
+                                        <h5>3. Colaboración y Simbiosis Industrial</h5>
+                                        <p>El residuo de uno es la materia prima de otro.</p>
+                                        <p><strong>Ejemplos:</strong> Aserrín para compostaje, retazos para rellenos, esmaltes sobrantes compartidos.</p>
+                                    </div>
+
+                                    <div class="strategy-item mb-4 p-3 border-start border-3 border-warning">
+                                        <h5>4. Diseño para Durabilidad y Reparación</h5>
+                                        <p>Piensa en el ciclo de vida completo del producto.</p>
+                                        <p><strong>Preguntas clave:</strong> ¿Durará años o meses? ¿Se puede reparar fácilmente? ¿Puedo ofrecer servicio de reparación?</p>
+                                    </div>
+
+                                    <div class="strategy-item mb-4 p-3 border-start border-3 border-danger">
+                                        <h5>5. Materiales Circulares</h5>
+                                        <p>Prioriza materiales que cierren el ciclo:</p>
+                                        <ul>
+                                            <li><strong>Materiales biológicos:</strong> Fibras naturales, maderas certificadas, tintes naturales</li>
+                                            <li><strong>Materiales técnicos:</strong> Metales, vidrio, plásticos reciclados</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="strategy-item mb-4 p-3 border-start border-3 border-primary">
+                                        <h5>6. Productos con Segunda Vida</h5>
+                                        <p>Diseña objetos que puedan transformarse o tener múltiples usos.</p>
+                                        <p><strong>Ejemplos:</strong> Mantas que son tapices, envases que son macetas, muebles modulares.</p>
+                                    </div>
+
+                                    <div class="strategy-item p-3 border-start border-3 border-success">
+                                        <h5>7. Modelos de Negocio Circulares</h5>
+                                        <p>Explora alternativas al modelo de venta tradicional:</p>
+                                        <ul>
+                                            <li><strong>Alquiler</strong> para productos de uso ocasional</li>
+                                            <li><strong>Suscripción</strong> con rotación de productos</li>
+                                            <li><strong>Recompra</strong> con descuento por devolución</li>
+                                            <li><strong>Servicio de restauración</strong> de piezas antiguas</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            {# Bloque 5: Casos de Éxito #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3"> Casos de Éxito Inspiradores</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="case-study mb-4 p-4 bg-light rounded">
+                                        <h5>Taller de Carpintería en México</h5>
+                                        <p><strong>Situación:</strong> Desechaba 2 toneladas de aserrín y virutas al año.</p>
+                                        <p><strong>Solución:</strong></p>
+                                        <ul>
+                                            <li>Vendió aserrín a granjas avícolas</li>
+                                            <li>Usó virutas como material de empaque</li>
+                                            <li>Creó línea de productos pequeños con retazos</li>
+                                        </ul>
+                                        <p><strong>Resultado:</strong> 85% reducción de residuos + 15% ingresos adicionales</p>
+                                    </div>
+
+                                    <div class="case-study mb-4 p-4 bg-light rounded">
+                                        <h5>Cooperativa de Tejedoras Indígenas en Colombia</h5>
+                                        <p><strong>Situación:</strong> Muchos desperdicios de empaques y retazos.</p>
+                                        <p><strong>Solución:</strong></p>
+                                        <ul>
+                                            <li>Hilado propio de algodón orgánico local</li>
+                                            <li>Tintes con plantas de la región</li>
+                                            <li>Retazos convertidos en borlas y detalles</li>
+                                            <li>Talleres usando retazos</li>
+                                        </ul>
+                                        <p><strong>Resultado:</strong> 60% reducción en costos + productos diferenciados</p>
+                                    </div>
+
+                                    <div class="case-study p-4 bg-light rounded">
+                                        <h5>Ceramista en Argentina</h5>
+                                        <p><strong>Situación:</strong> Acumulaba piezas defectuosas.</p>
+                                        <p><strong>Solución:</strong></p>
+                                        <ul>
+                                            <li>Molió piezas para crear chamota</li>
+                                            <li>Desarrolló línea de piezas rústicas</li>
+                                            <li>Sistema de devolución con descuento</li>
+                                            <li>Mosaicos y esculturas con piezas rotas</li>
+                                        </ul>
+                                        <p><strong>Resultado:</strong> Cero residuos cerámicos + línea exclusiva</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            {# Bloque 6: Plan de Acción #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3"> Plan de Acción - Primeros Pasos (30 Días)</h4>
+                                <div class="ps-4">
+                                    <div class="row text-center">
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-3 border rounded bg-primary text-black">
+                                                <h6>Semana 1</h6>
+                                                <p><strong>OBSERVAR</strong></p>
+                                                <small>Auditoría de residuos</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-3 border rounded bg-success text-white">
+                                                <h6>Semana 2</h6>
+                                                <p><strong>INVESTIGAR</strong></p>
+                                                <small>Materiales y colaboraciones</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-3 border rounded bg-warning text-dark">
+                                                <h6>Semana 3</h6>
+                                                <p><strong>EXPERIMENTAR</strong></p>
+                                                <small>Prototipar una estrategia</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-3 border rounded bg-info text-white">
+                                                <h6>Semana 4</h6>
+                                                <p><strong>IMPLEMENTAR</strong></p>
+                                                <small>Refinar y comunicar</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {# Material de Apoyo #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Material de Apoyo</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="p-3 border rounded text-center">
+                                        <i class="fas fa-file-powerpoint fa-2x text-danger mb-2"></i>
+                                        <h6>Diapositivas de la Capacitación</h6>
+                                        <a href="/media/capacitacion/ECONOMIA CIRCULAR DIAPOSITIVAS.pptx" class="btn btn-outline-primary btn-sm mt-2" download> Descargar PPTX </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="p-3 border rounded text-center">
+                                        <i class="fas fa-script fa-2x text-primary mb-2"></i>
+                                        <h6>Guía Completa</h6>
+                                        <a href="/media/capacitacion/Guión Economía Circular Aplicada a Artesanías.docx" class="btn btn-outline-primary btn-sm mt-2" download> Descargar Documento</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Navegación #}
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary btn-lg me-3">Ver Video de la Capacitación</a>
+                        <a href="{% url 'capacitaciones' %}" class="btn btn-outline-primary btn-lg">Volver a Capacitaciones</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

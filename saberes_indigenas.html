@@ -1,0 +1,311 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Saberes Indígenas - Capacitaciones JABIEIYE{% endblock %}
+
+{% block content %}
+    {# Hero Section #}
+    <header class="hero-section animate-on-scroll" style="background: linear-gradient(rgba(67, 97, 57, 0.85), rgba(86, 138, 89, 0.85)), url('{% static 'img/fondo.png' %}'); background-size: cover; background-position: center; height: 300px;">
+        <div class="hero-content">
+            <h1 class="display-4" style="color: #ffffff; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);">Apropiación y Preservación de Saberes Indígenas</h1>
+            <p class="lead" style="color: #f0fdf4; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);">Módulo 2 - Colaboración ética y respetuosa</p>
+        </div>
+    </header>
+
+    {# Información del Módulo #}
+    <section class="my-5 animate-on-scroll">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    
+                    {# Resumen del Módulo #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-clock text-primary me-2"></i>Duración</h5>
+                                    <p>20 minutos</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-play-circle text-primary me-2"></i>Modalidad</h5>
+                                    <p>Video capacitación</p>
+                                </div>
+                            </div>
+                            <p class="lead">Capacitación esencial sobre cómo interactuar con el conocimiento indígena de manera ética, respetuosa y colaborativa, preservando las tradiciones ancestrales.</p>
+                        </div>
+                    </div>
+
+                    {# Contenido de la Capacitación #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Contenido de la Capacitación</h2>
+                            
+                            {# Bloque 1: Introducción #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Introducción y Contexto</h4>
+                                <div class="ps-4">
+                                    <p><strong>"Bienvenidos y bienvenidas a esta capacitación sobre Apropiación y Preservación de Saberes Indígenas. Mi nombre es Saray Barrera de JABIEIYE..."</strong></p>
+                                    <p>Esta no es un tema solo técnico, es profundamente humano y cultural. Hablaremos de:</p>
+                                    <ul>
+                                        <li>La diferencia entre apropiación indebida y aprendizaje respetuoso</li>
+                                        <li>El valor cultural y espiritual de los saberes indígenas</li>
+                                        <li>Estrategias concretas para preservar y honrar estos conocimientos</li>
+                                        <li>Nuestra responsabilidad como artesanos en este proceso</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {# Bloque 2: Qué son los Saberes Indígenas #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">¿Qué son los Saberes Indígenas?</h4>
+                                <div class="ps-4">
+                                    <p>Sistemas completos de conocimiento desarrollados durante generaciones por pueblos originarios.</p>
+                                    
+                                    <div class="row mt-4">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="p-3 border rounded h-100">
+                                                <i class="fas fa-tools fa-2x text-warning mb-2"></i>
+                                                <h6>Técnicas Artesanales</h6>
+                                                <small>Tejido, cestería, alfarería, tallado</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="p-3 border rounded h-100">
+                                                <i class="fas fa-seedling fa-2x text-success mb-2"></i>
+                                                <h6>Conocimiento de Materiales</h6>
+                                                <small>Plantas, cuándo cosechar, cómo procesar</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="p-3 border rounded h-100">
+                                                <i class="fas fa-palette fa-2x text-info mb-2"></i>
+                                                <h6>Simbolismo y Significado</h6>
+                                                <small>Cada patrón, color y forma cuenta una historia</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="p-3 border rounded h-100">
+                                                <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                                                <h6>Prácticas Comunitarias</h6>
+                                                <small>Cómo se transmite, quién puede enseñar</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alert alert-info mt-3">
+                                        <strong>Importante:</strong> Estos saberes NO son solo técnicas. Son identidad, historia, espiritualidad y resistencia cultural.
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 3: Problema de Apropiación Indebida #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">El Problema de la Apropiación Indebida</h4>
+                                <div class="ps-4">
+                                    <p>Ocurre cuando se toman elementos de una cultura, especialmente de comunidades marginadas, sin:</p>
+                                    
+                                    <div class="row text-center mt-4">
+                                        <div class="col-md-3 mb-3">
+                                            <i class="fas fa-ban fa-2x text-danger mb-2"></i>
+                                            <p><strong>Permiso</strong></p>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <i class="fas fa-question fa-2x text-danger mb-2"></i>
+                                            <p><strong>Comprensión</strong></p>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <i class="fas fa-credit-card fa-2x text-danger mb-2"></i>
+                                            <p><strong>Reconocimiento</strong></p>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <i class="fas fa-hand-holding-usd fa-2x text-danger mb-2"></i>
+                                            <p><strong>Compensación</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="alert alert-warning mt-4">
+                                        <h6>Ejemplos problemáticos que vemos constantemente:</h6>
+                                        <ul class="mb-0">
+                                            <li>Marcas internacionales que copian diseños indígenas</li>
+                                            <li>Diseñadores que usan patrones sagrados sin entender su significado</li>
+                                            <li>Festivales donde usan trajes tradicionales como "disfraces"</li>
+                                            <li>Apropiación sin retorno económico a las comunidades</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 4: Los 5 Pilares #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Los 5 Pilares de la Apropiación Respetuosa</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="pilar-item mb-4 p-4 border-start border-4 border-primary bg-light">
+                                        <h5>1. Relación Directa</h5>
+                                        <p><strong>Aprende de maestros artesanos, no de internet</strong></p>
+                                        <p>Establece relaciones de largo plazo, no transacciones puntuales. Visita comunidades, convive, escucha.</p>
+                                    </div>
+
+                                    <div class="pilar-item mb-4 p-4 border-start border-4 border-success bg-light">
+                                        <h5>2. Consentimiento Informado</h5>
+                                        <p><strong>Pregunta qué puedes aprender y qué no</strong></p>
+                                        <p>Entiende qué elementos son sagrados o exclusivos. Respeta cuando te dicen que no.</p>
+                                    </div>
+
+                                    <div class="pilar-item mb-4 p-4 border-start border-4 border-info bg-light">
+                                        <h5>3. Reconocimiento y Atribución</h5>
+                                        <p><strong>Nombra la técnica correctamente</strong></p>
+                                        <p>Cuenta su origen y significado. Da crédito a quienes te enseñaron. No presentes como tuyo lo que no inventaste.</p>
+                                    </div>
+
+                                    <div class="pilar-item mb-4 p-4 border-start border-4 border-warning bg-light">
+                                        <h5>4. Compensación Justa</h5>
+                                        <p><strong>Paga por el conocimiento que recibes</strong></p>
+                                        <p>Comparte beneficios económicos de manera equitativa. Contribuye al bienestar de la comunidad.</p>
+                                    </div>
+
+                                    <div class="pilar-item p-4 border-start border-4 border-danger bg-light">
+                                        <h5>5. Contexto y Respeto</h5>
+                                        <p><strong>Mantén el significado cultural intacto</strong></p>
+                                        <p>No trivialices símbolos sagrados. Educa a tus clientes sobre el origen. No uses elementos ceremoniales en contextos inapropiados.</p>
+                                    </div>
+
+                                    <div class="alert alert-success mt-4">
+                                        <strong>La diferencia fundamental:</strong> ¿Estás <strong>EXTRAYENDO</strong> o estás <strong>COLABORANDO</strong>? ¿Estás <strong>TOMANDO</strong> o estás <strong>COMPARTIENDO</strong>?
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 5: Estrategias de Preservación #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Estrategias para la Preservación</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="p-4 border rounded h-100">
+                                                <i class="fas fa-camera fa-2x text-primary mb-3"></i>
+                                                <h5>Documentación Colaborativa</h5>
+                                                <p>Documenta <strong>CON</strong> las comunidades, no <strong>SOBRE</strong> ellas. Ellos deciden qué se registra y qué permanece privado.</p>
+                                                <small class="text-muted">Ejemplo: Proyecto en Oaxaca donde jóvenes indígenas documentaron a sus abuelas</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="p-4 border rounded h-100">
+                                                <i class="fas fa-exchange-alt fa-2x text-success mb-3"></i>
+                                                <h5>Transmisión Intergeneracional</h5>
+                                                <p>Programas de maestro-aprendiz. Valorar económicamente el conocimiento ancestral para que jóvenes quieran aprenderlo.</p>
+                                                <small class="text-muted">Ejemplo: Colectivo de parteras en Ecuador</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="p-4 border rounded h-100">
+                                                <i class="fas fa-gavel fa-2x text-warning mb-3"></i>
+                                                <h5>Protección Legal y Colectiva</h5>
+                                                <p>Registro de conocimientos tradicionales. Denominación de origen. Contratos colectivos que requieren permiso comunitario.</p>
+                                                <small class="text-muted">Ejemplo: Mola kuna en Panamá</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="p-4 border rounded h-100">
+                                                <i class="fas fa-recycle fa-2x text-info mb-3"></i>
+                                                <h5>Revitalización de Materiales</h5>
+                                                <p>Recuperar cultivos de plantas tintóreas. Enseñar técnicas casi perdidas. Conectar últimos maestros con aprendices.</p>
+                                                <small class="text-muted">Ejemplo: Tejedoras en Guatemala recuperaron el añil</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 6: Guía Práctica #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Guía Práctica para Artesanos</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="guide-step mb-4">
+                                        <h5>Antes de Empezar - Pregúntate Honestamente:</h5>
+                                        <ul>
+                                            <li>¿Por qué quiero trabajar con esta técnica o diseño?</li>
+                                            <li>¿Estoy dispuesto a establecer una relación de largo plazo?</li>
+                                            <li>¿Puedo compensar justamente?</li>
+                                            <li>¿Entiendo el contexto cultural o solo me gusta la estética?</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="guide-step mb-4">
+                                        <h5>Al Iniciar el Contacto:</h5>
+                                        <ol>
+                                            <li><strong>Investiga</strong> sobre la comunidad, su historia, su situación actual</li>
+                                            <li><strong>Llega con humildad</strong> - no como quien va a "salvar" o "mejorar"</li>
+                                            <li><strong>Establece confianza</strong> - las primeras visitas son para conocerse</li>
+                                            <li><strong>Identifica autoridades legítimas</strong> - habla con líderes comunitarios</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="guide-step mb-4">
+                                        <h5>Durante el Aprendizaje:</h5>
+                                        <ul>
+                                            <li><strong>Escucha más</strong> de lo que hablas</li>
+                                            <li><strong>Aprende TODO el proceso</strong>, no solo lo vistoso</li>
+                                            <li><strong>Comprende los significados</strong>, no solo las técnicas</li>
+                                            <li><strong>Respeta los tiempos</strong> de la comunidad</li>
+                                            <li><strong>Pregunta qué puedes y qué no puedes hacer</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="guide-step">
+                                        <h5>Señales de Alerta - Revisa si:</h5>
+                                        <div class="alert alert-danger">
+                                            <ul class="mb-0">
+                                                <li>❌ No conoces personalmente a nadie de la comunidad de origen</li>
+                                                <li>❌ Aprendiste todo por internet o libros</li>
+                                                <li>❌ Nunca has compensado económicamente</li>
+                                                <li>❌ Usas términos como "inspiración tribal" sin especificar origen</li>
+                                                <li>❌ Te molesta dar crédito porque "todos copian de todos"</li>
+                                                <li>❌ Vendes caro algo que copiaste de artesanos que viven en pobreza</li>
+                                            </ul>
+                                        </div>
+                                        <p class="text-center fw-bold mt-3">Si varias de estas señales aparecen, es momento de repensar tu práctica.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {# Material de Apoyo #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Material de Apoyo</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="p-3 border rounded text-center">
+                                        <i class="fas fa-file-powerpoint fa-2x text-danger mb-2"></i>
+                                        <h6>Diapositivas de la Capacitación</h6>
+                                        <a href="/media/capacitacion/Apropiacion y Preservacion de-Saberes Indigenas DIAPOSITIVAS.pptx" class="btn btn-outline-primary btn-sm mt-2" download> Descargar PPTX </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="p-3 border rounded text-center">
+                                        <i class="fas fa-script fa-2x text-primary mb-2"></i>
+                                        <h6>Guía Completa</h6>
+                                        <a href="/media/capacitacion/Guion apropiacion y preservacion de saberes indigenas.docx" class="btn btn-outline-primary btn-sm mt-2" download> Descargar Docuemento</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Navegación #}
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary btn-lg me-3">Ver Video de la Capacitación</a>
+                        <a href="{% url 'capacitaciones' %}" class="btn btn-outline-primary btn-lg">Volver a Capacitaciones</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

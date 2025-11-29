@@ -1,0 +1,460 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Diseño Sostenible - Capacitaciones JABIEIYE{% endblock %}
+
+{% block content %}
+    {# Hero Section #}
+    <header class="hero-section animate-on-scroll" style="background: linear-gradient(rgba(76, 139, 87, 0.85), rgba(104, 173, 104, 0.85)), url('{% static 'img/fondo.png' %}'); background-size: cover; background-position: center; height: 300px;">
+        <div class="hero-content">
+            <h1 class="display-4" style="color: #ffffff; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);">Diseño Artesanal Sostenible</h1>
+            <p class="lead" style="color: #f0fdf4; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);">Módulo 3 - Innovación consciente y responsable</p>
+        </div>
+    </header>
+
+    {# Información del Módulo #}
+    <section class="my-5 animate-on-scroll">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    
+                    {# Resumen del Módulo #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-clock text-primary me-2"></i>Duración</h5>
+                                    <p>20 minutos</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-play-circle text-primary me-2"></i>Modalidad</h5>
+                                    <p>Video capacitación</p>
+                                </div>
+                            </div>
+                            <p class="lead">Descubre cómo el diseño sostenible no es una limitación para la creatividad artesanal, sino una oportunidad enorme para innovar, diferenciarse en el mercado y construir un futuro más viable para nuestro oficio.</p>
+                        </div>
+                    </div>
+
+                    {# Contenido de la Capacitación #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Contenido de la Capacitación</h2>
+                            
+                            {# Bloque 1: Introducción #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Introducción al Diseño Sostenible</h4>
+                                <div class="ps-4">
+                                    <p><strong>"Buenos días/tardes a todos y todas. Mi nombre es Saray Barrera de JABIEIYE y es un placer acompañarlos en esta capacitación sobre Diseño Artesanal Sostenible."</strong></p>
+                                    
+                                    <div class="definition-card p-4 bg-light rounded mb-4">
+                                        <h5>¿Qué es Diseño Sostenible?</h5>
+                                        <p class="mb-0">Es un enfoque que <strong>integra consideraciones ambientales, sociales y económicas</strong> en todo el proceso de creación de productos, desde la concepción hasta el fin de vida útil.</p>
+                                    </div>
+
+                                    <div class="alert alert-info">
+                                        <strong>No se trata solo de usar materiales "ecológicos".</strong> Es mucho más profundo e integral.
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 2: Las 3 Dimensiones #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Las 3 Dimensiones de la Sostenibilidad</h4>
+                                <div class="ps-4">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4">
+                                            <div class="text-center p-4 border rounded h-100" style="background: linear-gradient(135deg, #2d7a4f, #52b788); color: white;">
+                                                <i class="fas fa-leaf fa-3x mb-3"></i>
+                                                <h5>Ambiental</h5>
+                                                <p class="mb-2">Minimizar uso de recursos naturales</p>
+                                                <p class="mb-2">Reducir emisiones y contaminación</p>
+                                                <p class="mb-0">Proteger biodiversidad</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="text-center p-4 border rounded h-100" style="background: linear-gradient(135deg, #1e6ea7, #3498db); color: white;">
+                                                <i class="fas fa-users fa-3x mb-3"></i>
+                                                <h5>Social</h5>
+                                                <p class="mb-2">Condiciones laborales dignas</p>
+                                                <p class="mb-2">Pago justo a artesanos</p>
+                                                <p class="mb-0">Preservación de culturas</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="text-center p-4 border rounded h-100" style="background: linear-gradient(135deg, #f39c12, #f1c40f); color: white;">
+                                                <i class="fas fa-chart-line fa-3x mb-3"></i>
+                                                <h5>Económica</h5>
+                                                <p class="mb-2">Modelos viables a largo plazo</p>
+                                                <p class="mb-2">Independencia de subsidios</p>
+                                                <p class="mb-0">Precios justos y dignos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="alert alert-warning text-center">
+                                        <strong>Importante:</strong> Estas tres dimensiones deben estar <strong>equilibradas</strong>. Un producto no es verdaderamente sostenible si cuida el ambiente pero se hace con trabajo precario.
+                                    </div>
+                                </div>
+                            </div>
+
+                            {# Bloque 3: Los 7 Principios #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">🔧 Los 7 Principios del Diseño Sostenible</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="principle-item mb-4 p-4 border-start border-4 border-primary bg-light">
+                                        <h5>1. Materiales Conscientes</h5>
+                                        <p><strong>Criterios para seleccionar materiales:</strong></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>✅ Más Sostenible</h6>
+                                                <ul>
+                                                    <li>Cuero curtido vegetal</li>
+                                                    <li>Maderas locales certificadas</li>
+                                                    <li>Fibras naturales orgánicas</li>
+                                                    <li>Tintes naturales de plantas</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>❌ Menos Sostenible</h6>
+                                                <ul>
+                                                    <li>Cuero curtido con cromo</li>
+                                                    <li>Maderas tropicales sin certificación</li>
+                                                    <li>Plásticos vírgenes</li>
+                                                    <li>Tintes sintéticos con metales</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="principle-item mb-4 p-4 border-start border-4 border-success bg-light">
+                                        <h5>2. Diseñar para la Durabilidad</h5>
+                                        <p><strong>El producto más sostenible es el que NO necesitas reemplazar.</strong></p>
+                                        <p><strong>Estrategias:</strong></p>
+                                        <ul>
+                                            <li>Calidad sobre cantidad</li>
+                                            <li>Materiales resistentes</li>
+                                            <li>Construcción robusta</li>
+                                            <li>Estética atemporal</li>
+                                        </ul>
+                                        <p class="mb-0"><strong>Pregunta clave:</strong> ¿Este producto será amado en 5, 10, 20 años?</p>
+                                    </div>
+
+                                    <div class="principle-item mb-4 p-4 border-start border-4 border-info bg-light">
+                                        <h5>3. Diseño para Reparación y Adaptación</h5>
+                                        <p><strong>Los productos deben poder evolucionar con el usuario.</strong></p>
+                                        <p><strong>Cómo diseñar para reparabilidad:</strong></p>
+                                        <ul>
+                                            <li>Usar uniones accesibles</li>
+                                            <li>Diseñar por módulos reemplazables</li>
+                                            <li>Ofrecer piezas de repuesto</li>
+                                            <li>Incluir instrucciones de cuidado</li>
+                                        </ul>
+                                        <p class="mb-0 text-success"><strong>💡 Caso inspirador:</strong> Marca de mochilas con garantía de por vida - tasas de recompra del 85%</p>
+                                    </div>
+
+                                    <div class="principle-item mb-4 p-4 border-start border-4 border-warning bg-light">
+                                        <h5>4. Multifuncionalidad y Eficiencia</h5>
+                                        <p><strong>Un objeto, múltiples usos = menos objetos totales.</strong></p>
+                                        <p><strong>Ejemplos:</strong></p>
+                                        <ul>
+                                            <li>Manta que es también tapiz</li>
+                                            <li>Mesa auxiliar que es estantería</li>
+                                            <li>Joyería transformable</li>
+                                            <li>Contenedores decorativos</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="principle-item mb-4 p-4 border-start border-4 border-danger bg-light">
+                                        <h5>5. Ciclo de Vida Cerrado</h5>
+                                        <p><strong>Diseñar pensando en el final desde el principio.</strong></p>
+                                        
+                                        <div class="row mt-3">
+                                            <div class="col-md-4">
+                                                <div class="text-center p-3 border rounded">
+                                                    <i class="fas fa-recycle fa-2x text-success mb-2"></i>
+                                                    <h6>Ruta Biológica</h6>
+                                                    <small>Vuelta a la naturaleza</small>
+                                                    <p class="small mt-2">Materiales biodegradables o compostables</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center p-3 border rounded">
+                                                    <i class="fas fa-infinity fa-2x text-primary mb-2"></i>
+                                                    <h6>Ruta Técnica</h6>
+                                                    <small>Vuelta al ciclo productivo</small>
+                                                    <p class="small mt-2">Materiales reciclables infinitamente</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center p-3 border rounded">
+                                                    <i class="fas fa-sync-alt fa-2x text-warning mb-2"></i>
+                                                    <h6>Ruta Híbrida</h6>
+                                                    <small>Segunda vida</small>
+                                                    <p class="small mt-2">Partes separables para diferentes destinos</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="principle-item mb-4 p-4 border-start border-4 border-secondary bg-light">
+                                        <h5>6. Producción de Bajo Impacto</h5>
+                                        <p><strong>No solo importa QUÉ haces, sino CÓMO lo haces.</strong></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Proceso sostenible incluye:</h6>
+                                                <ul>
+                                                    <li>Energía: Luz natural, herramientas eficientes</li>
+                                                    <li>Agua: Reciclar, técnicas de bajo consumo</li>
+                                                    <li>Residuos: Estrategias cero desperdicio</li>
+                                                    <li>Químicos: Alternativas naturales</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Ejemplo práctico:</h6>
+                                                <p>Taller de teñido cambió a tintes naturales (cúrcuma, añil, cochinilla):</p>
+                                                <ul>
+                                                    <li>90% menos contaminación</li>
+                                                    <li>Productos más valorados</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="principle-item p-4 border-start border-4 border-dark bg-light">
+                                        <h5>7. Transparencia y Storytelling</h5>
+                                        <p><strong>La sostenibilidad debe ser visible y comunicada.</strong></p>
+                                        <p><strong>Qué compartir con tus clientes:</strong></p>
+                                        <ul>
+                                            <li>Origen de materiales</li>
+                                            <li>Proceso de elaboración</li>
+                                            <li>Quién hizo la pieza</li>
+                                            <li>Impacto ambiental y social</li>
+                                            <li>Cómo cuidar y reparar</li>
+                                            <li>Qué hacer al final de su vida útil</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            {# Bloque 4: Herramientas Prácticas #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">🛠️ Herramientas Prácticas de Diseño</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="tool-item mb-4">
+                                        <h5>1. Análisis de Ciclo de Vida Simplificado</h5>
+                                        <p><strong>Preguntas guía para evaluar tu producto:</strong></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Materiales</h6>
+                                                <ul>
+                                                    <li>¿De dónde vienen?</li>
+                                                    <li>¿Cómo se extrajeron?</li>
+                                                    <li>¿Qué procesamiento requirieron?</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Producción</h6>
+                                                <ul>
+                                                    <li>¿Cuánta energía usas?</li>
+                                                    <li>¿Generas residuos?</li>
+                                                    <li>¿Usas agua o químicos?</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Transporte</h6>
+                                                <ul>
+                                                    <li>¿Cómo llega al cliente?</li>
+                                                    <li>¿Qué empaque usas?</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Fin de Vida</h6>
+                                                <ul>
+                                                    <li>¿Qué pasa cuando ya no sirve?</li>
+                                                    <li>¿Se puede reparar/reciclar?</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tool-item mb-4">
+                                        <h5>2. La Matriz de Materiales</h5>
+                                        <p>Tabla para evaluar opciones de materiales balanceando múltiples factores:</p>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Material</th>
+                                                        <th>Impacto Ambiental</th>
+                                                        <th>Costo</th>
+                                                        <th>Disponibilidad Local</th>
+                                                        <th>Durabilidad</th>
+                                                        <th>Fin de Vida</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Algodón orgánico</td>
+                                                        <td>⭐️⭐️⭐️⭐️</td>
+                                                        <td>Alto</td>
+                                                        <td>Media</td>
+                                                        <td>Alta</td>
+                                                        <td>Compostable</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Algodón convencional</td>
+                                                        <td>⭐️⭐️</td>
+                                                        <td>Medio</td>
+                                                        <td>Alta</td>
+                                                        <td>Alta</td>
+                                                        <td>Compostable*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Poliéster reciclado</td>
+                                                        <td>⭐️⭐️⭐️</td>
+                                                        <td>Medio</td>
+                                                        <td>Baja</td>
+                                                        <td>Muy alta</td>
+                                                        <td>Reciclable</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            {# Bloque 5: Casos de Éxito #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Casos de Éxito Inspiradores</h4>
+                                <div class="ps-4">
+                                    
+                                    <div class="case-study mb-4 p-4 bg-light rounded">
+                                        <h5>Muebles de Bambú - Colombia</h5>
+                                        <p><strong>Transformación:</strong> Cambiaron de maderas duras (30-50 años en crecer) a bambú (3-5 años en crecer).</p>
+                                        <p><strong>Resultados:</strong></p>
+                                        <ul>
+                                            <li>40% reducción en costos de material</li>
+                                            <li>Ventas crecieron 200% en 2 años</li>
+                                            <li>Acceso a mercado internacional</li>
+                                            <li>Ahora cultivan su propio bambú</li>
+                                        </ul>
+                                        <p class="mb-0"><strong>Eslogan:</strong> "Muebles que crecen más rápido de lo que los usas"</p>
+                                    </div>
+
+                                    <div class="case-study mb-4 p-4 bg-light rounded">
+                                        <h5>Textiles con Tintes Naturales - Perú</h5>
+                                        <p><strong>Transformación:</strong> Cooperativa cambió de tintes sintéticos (contaminantes) a tintes naturales ancestrales.</p>
+                                        <p><strong>Resultados:</strong></p>
+                                        <ul>
+                                            <li>Eliminación total de contaminación química</li>
+                                            <li>Precio de venta aumentó 80%</li>
+                                            <li>Exportación a Europa y Norteamérica</li>
+                                            <li>Paleta de 35 colores naturales</li>
+                                        </ul>
+                                        <p class="mb-0"><strong>Certificación:</strong> "Zero-Waste Natural Dyes"</p>
+                                    </div>
+
+                                    <div class="case-study p-4 bg-light rounded">
+                                        <h5>Joyería de Metales Reciclados - Argentina</h5>
+                                        <p><strong>Transformación:</strong> Comenzó a trabajar solo con oro y plata reciclados (de joyería vieja, electrónicos).</p>
+                                        <p><strong>Resultados:</strong></p>
+                                        <ul>
+                                            <li>95% de materiales son reciclados</li>
+                                            <li>Precio premium del 30%</li>
+                                            <li>Lista de espera de 3 meses</li>
+                                            <li>Programa "Tu historia, nueva forma"</li>
+                                        </ul>
+                                        <p class="mb-0"><strong>Cliente tipo:</strong> Buscan "joyería consciente" como parte de su identidad</p>
+                                    </div>
+
+                                    <div class="alert alert-success mt-4 text-center">
+                                        <strong>¿Qué tienen en común estos casos?</strong><br>
+                                        No bajaron estándares de calidad, los subieron. No compitieron en precio, compitieron en valores.
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            {# Bloque 6: Plan de Acción #}
+                            <div class="module-block mb-5">
+                                <h4 class="text-primary mb-3">Tu Plan de Acción en 4 Pasos</h4>
+                                <div class="ps-4">
+                                    <div class="row text-center">
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-4 border rounded bg-primary text-white">
+                                                <h6>PASO 1</h6>
+                                                <h5>EVALÚA</h5>
+                                                <p><strong>Esta semana</strong></p>
+                                                <small>Analiza un producto actual, identifica 3 mejoras</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-4 border rounded bg-success text-white">
+                                                <h6>PASO 2</h6>
+                                                <h5>INVESTIGA</h5>
+                                                <p><strong>Próximas 2 semanas</strong></p>
+                                                <small>Busca proveedores, técnicas alternativas</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-4 border rounded bg-warning text-dark">
+                                                <h6>PASO 3</h6>
+                                                <h5>PROTOTIPA</h5>
+                                                <p><strong>Semanas 3-4</strong></p>
+                                                <small>Crea versión mejorada, busca retroalimentación</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="p-4 border rounded bg-info text-white">
+                                                <h6>PASO 4</h6>
+                                                <h5>IMPLEMENTA</h5>
+                                                <p><strong>Mes 2 en adelante</strong></p>
+                                                <small>Lanza versión sostenible, comunica cambios</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {# Material de Apoyo #}
+                    <div class="card border-0 shadow-sm mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4">Material de Apoyo</h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="p-3 border rounded text-center">
+                                        <i class="fas fa-file-powerpoint fa-2x text-danger mb-2"></i>
+                                        <h6>Diapositivas de la Capacitación</h6>
+                                        <a href="/media/capacitacion/DISEÑO ARTESANAL SOSTENIBLE DIAPOSITIVAS.pptx" class="btn btn-outline-primary btn-sm mt-2" download> Descargar PPTX </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="p-3 border rounded text-center">
+                                        <i class="fas fa-script fa-2x text-primary mb-2"></i>
+                                        <h6>Guía Completa</h6>
+                                        <a href="/media/capacitacion/Guión Diseño Artesanal Sostenible.docx" class="btn btn-outline-primary btn-sm mt-2" download> Descargar PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Navegación #}
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary btn-lg me-3">Ver Video de la Capacitación</a>
+                        <a href="{% url 'capacitaciones' %}" class="btn btn-outline-primary btn-lg">Volver a Capacitaciones</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
