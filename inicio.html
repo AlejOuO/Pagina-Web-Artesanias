@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Memories QR — Perfiles Conmemorativos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --muted:#f6f7f8;
+  --soft:#f2f4f5;
+  --text:#222831;
+  --muted-text:#6b7280;
+  --accent:#25d366;
+  --card-radius:16px;
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 6px 22px rgba(34,40,49,0.08);
+  --focus: 0 0 0 6px rgba(37,211,102,0.12);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg) 0%, #171515 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* Header */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  backdrop-filter: blur(6px);
+  background:linear-gradient(180deg, rgba(92, 73, 73, 0.7), rgba(255,255,255,0.55));
+  border-bottom:1px solid rgba(16,24,32,0.04);
+  z-index:1000;
+}
+.container{
+  max-width:1100px;margin:0 auto;padding:16px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);
+}
+.logo{
+  /* Estilos del contenedor del logo ajustados para la imagen */
+  width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  background:transparent; /* Ya no necesitamos el fondo degradado del logo anterior */
+  box-shadow:none; /* Eliminamos la sombra del logo anterior */
+  border:none; /* Eliminamos el borde del logo anterior */
+  overflow: hidden;
+}
+.logo img {
+    /* Estilos para que la imagen se ajuste y se vea bien */
+    width: 130%;
+    height: 130%;
+    object-fit: contain;
+    display: block;
+    padding: 2px; /* Pequeño padding para asegurar que no se corte */
+}
+/* .logo-mark ya no es necesario, se elimina o se deja vacío */
+.logo-mark{ 
+  width:22px;height:22px;border-radius:5px;background:transparent;transform:rotate(25deg);
+  box-shadow: none;
+}
+.brand h1{font-size:15px;margin:0;font-weight:700;letter-spacing:0.1px}
+.nav{display:flex;align-items:center;gap:12px}
+.nav a{color:var(--muted-text);text-decoration:none;padding:6px 10px;border-radius:8px;font-weight:600;font-size:14px}
+.nav a:hover{background:var(--soft);color:var(--text)}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:white;padding:8px 12px;border-radius:12px;font-weight:700;text-decoration:none;
+  box-shadow: 0 8px 26px rgba(37,211,102,0.12);transition:transform .18s ease, box-shadow .18s;
+}
+.cta:active{transform:translateY(1px)}
+.menu-toggle{display:none}
+
+/* Hero */
+.hero{
+  margin-top:86px;
+  position:relative;padding:64px 16px 36px;
+  overflow:hidden;
+}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:16px}
+.hero-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  border-radius:20px;padding:36px;box-shadow:var(--shadow);border:1px solid rgba(16,24,32,0.04);
+}
+.h-title{font-size:28px;margin:0 0 10px;font-weight:700;color:var(--text)}
+.h-sub{color:var(--muted-text);margin:0 0 18px}
+.h-cta{display:flex;gap:12px;flex-wrap:wrap}
+.whatsapp-btn{
+  display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:white;padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;
+  box-shadow:0 10px 30px rgba(37,211,102,0.12);transition:transform .18s ease;
+}
+.whatsapp-btn:hover{transform:translateY(-3px)}
+.secondary{
+  display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:transparent;border:1px solid rgba(34,40,49,0.06);color:var(--text);
+}
+.hero-visual{
+  position:relative;border-radius:20px;overflow:hidden;height:420px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0.35));
+  border:1px solid rgba(16,24,32,0.04);
+}
+.hero-visual img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.02) contrast(.98)}
+.hero-visual .overlay{
+  position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,0.9);padding:14px;border-radius:12px;backdrop-filter: blur(6px);
+  box-shadow:0 8px 24px rgba(16,24,32,0.06);max-width:86%;
+}
+.overlay h3{margin:0;font-size:16px}
+.overlay p{margin:6px 0 0;color:var(--muted-text);font-size:13px}
+
+/* Sections */
+.section{max-width:1100px;margin:36px auto;padding:24px 16px}
+.grid{display:grid;gap:18px}
+.about-grid{grid-template-columns:1fr 1fr;align-items:center}
+.card{background:linear-gradient(180deg, #ffffff, #fbfcfc);border-radius:14px;padding:20px;box-shadow:var(--shadow);border:1px solid rgba(16,24,32,0.03)}
+.small{font-size:14px;color:var(--muted-text)}
+.feature{display:flex;gap:12px;align-items:flex-start}
+.feature .icon{width:44px;height:44;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+/* Steps */
+.steps{display:flex;flex-direction:column;gap:14px}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step .num{width:44px;height:44;border-radius:10px;background:linear-gradient(180deg,#fff,#f6f7f8);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);font-size:16px;border:1px solid rgba(37,211,102,0.08)}
+
+/* Profile example */
+.profile{
+  display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:start;
+  background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+  padding:18px;border-radius:14px;border:1px solid rgba(16,24,32,0.04);
+}
+.p-photo{width:200px;height:200px;border-radius:12px;overflow:hidden;flex-shrink:0}
+.p-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.p-meta h2{margin:0;font-size:20px}
+.p-meta p{margin:6px 0;color:var(--muted-text)}
+.p-message{margin-top:12px;padding:12px;border-radius:12px;background:linear-gradient(180deg,#fbfbfb,#fff);border:1px dashed rgba(16,24,32,0.04)}
+
+/* Gallery */
+.gallery{display:flex;gap:8px;flex-wrap:wrap}
+.gallery img{width:calc(33.333% - 5px);height:94px;object-fit:cover;border-radius:8px;border:1px solid rgba(16,24,32,0.04)}
+
+/* Examples grid */
+.examples{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.example-card{border-radius:12px;overflow:hidden;position:relative;border:1px solid rgba(16,24,32,0.04)}
+.example-card img{width:100%;height:160px;object-fit:cover;display:block}
+.example-card .tag{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.5);color:white;padding:6px 10px;border-radius:8px;font-weight:700;font-size:13px}
+
+/* Contact form */
+.form-grid{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+.form-input{display:flex;flex-direction:column;gap:8px}
+.input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(16,24,32,0.06);background:transparent;font-size:14px}
+textarea{min-height:120px;resize:vertical}
+.form-actions{display:flex;gap:12px;align-items:center}
+.send-btn{background:var(--accent);color:white;padding:12px 14px;border-radius:12px;font-weight:700;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px}
+.send-btn:focus{outline:none;box-shadow:var(--focus)}
+.small-note{font-size:13px;color:var(--muted-text)}
+
+/* Footer */
+.footer{background:transparent;border-top:1px solid rgba(16,24,32,0.04);padding:26px 16px;margin-top:36px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.footer a{text-decoration:none;color:var(--muted-text);font-weight:600}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:18px}
+  .profile{grid-template-columns:1fr;grid-template-rows:auto auto}
+  .examples{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .menu-toggle{display:inline-flex}
+}
+@media (max-width:560px){
+  .examples{grid-template-columns:1fr}
+  .gallery img{width:calc(50% - 5px);height:88px}
+  .logo{width:40px;height:40px}
+  .brand h1{font-size:14px}
+}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.fade-slow{transition-duration:1.1s}
+.float{
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+  100%{transform:translateY(0)}
+}
+
+/* Microinteractions */
+button, a{transition:transform .16s ease, box-shadow .16s ease}
+.btn-like{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:10px}
+.icon-heart{width:36px;height:36;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff,#fbfbfb);border:1px solid rgba(16,24,32,0.04)}
+.small-pill{padding:6px 8px;border-radius:999px;background:var(--soft);font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a class="brand" href="#">
+      <div class="logo">
+        <img src="https://i.ibb.co/JWDcNr3g/Chat-GPT-Image-6-jun-2025-12-26-02.png" alt="Logo Personalizado">
+        <div class="logo-mark"></div>
+      </div>
+      <div>
+        <h1>Memories QR</h1>
+        <div style="font-size:12px;color:var(--muted-text);margin-top:4px">Honrando recuerdos con tecnología</div>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#ejemplo">Ejemplo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:10px">
+      <a class="cta" href="https://wa.me/qr/ZP5DXJYRD5KVE1" target="_blank" rel="noopener">Contactar</a>
+      <button class="menu-toggle small-pill" aria-label="Abrir menú">Menú</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-card reveal">
+        <p class="small" style="margin:0 0 8px">Conmemoración digital</p>
+        <h2 class="h-title">Preserva historias. Comparte recuerdos. Nunca olvides.</h2>
+        <p class="h-sub">Crea un perfil conmemorativo accesible con un código QR que conecte a familiares y amigos con fotos, mensajes y momentos que importan.</p>
+
+        <div class="h-cta">
+          <a class="whatsapp-btn" href="https://wa.me/qr/ZP5DXJYRD5KVE1" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M20.5 3.5L3.5 20.5" stroke="rgba(255,255,255,.12)"/></svg>
+            Contactar por WhatsApp
+          </a>
+
+          <button class="secondary" id="open-contact">Enviar solicitud</button>
+
+          <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+            <div class="small-note">Totalmente seguro</div>
+            <div class="small-pill">Minimal</div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;display:flex;gap:12px;align-items:center">
+          <div style="font-size:13px;color:var(--muted-text)">¿Necesitas ayuda para crear un perfil?</div>
+          <a class="btn-like" href="#contacto" style="text-decoration:none">
+            <span class="icon-heart">♥</span><span style="font-weight:700;color:var(--text)">Hablemos</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal float">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7a4a5e2c1a1a8c1f9b9a1b9f2b2b1f3f" alt="Memorial evocador">
+        <div class="overlay">
+          <h3>“Los recuerdos nos mantienen cerca.”</h3>
+          <p>Un lugar respetuoso para reunir fotos, historias y mensajes para quienes amamos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quienes" class="section reveal fade-slow">
+    <div class="about-grid grid">
+      <div class="card">
+        <h3>Quiénes somos</h3>
+        <p class="small">Somos una plataforma que honra y preserva recuerdos usando tecnología QR. Facilitamos perfiles conmemorativos que reúnen fotos, audios, textos y videos en un espacio seguro y respetuoso.</p>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <div class="feature">
+            <div class="icon">QR</div>
+            <div>
+              <strong>Accesible</strong>
+              <div class="small">Escanea y revívelo al instante.</div>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">🔒</div>
+            <div>
+              <strong>Privado</strong>
+              <div class="small">Control de acceso y edición por la familia.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Misión</h3>
+        <p class="small">Preservar la memoria de las personas a través de espacios digitales significativos que integren emociones, historias y pruebas visuales del legado personal.</p>
+        <h3 style="margin-top:12px">Visión</h3>
+        <p class="small">Ser la herramienta conmemorativa más confiable y humana, conectando generaciones a través de recuerdos accesibles y bien cuidados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" class="section reveal">
+    <div class="card">
+      <h3>Cómo funciona</h3>
+      <div class="steps" style="margin-top:12px">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <strong>Crear perfil</strong>
+            <div class="small">Sube fotos, escribe la biografía, agrega fechas y un mensaje especial.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <strong>Generar QR</strong>
+            <div class="small">Obtén un código QR único vinculado al perfil digital.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <strong>Instalar</strong>
+            <div class="small">Imprime el QR en placas, lápidas o recuerdos físicos.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <strong>Escanear y recordar</strong>
+            <div class="small">Familiares y amigos escanean para ver el homenaje y compartirlo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ejemplo" class="section reveal">
+    <h3 style="margin:0 0 14px">Ejemplo de perfil conmemorativo</h3>
+    <div class="profile card">
+      <div class="p-photo">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b6f6b7b6e7c7a5c6d1a6e8f9b0d4e5f" alt="Foto de perfil">
+      </div>
+      <div class="p-meta">
+        <h2>María Gómez</h2>
+        <p class="small">1948 — 2024</p>
+        <div class="p-message">
+          <strong>Mensaje especial:</strong>
+          <p class="small" style="margin:8px 0 0">"Tu risa fue una luz constante. Gracias por cada tarde de historias y por enseñar con amor."</p>
+        </div>
+
+        <div style="margin-top:12px">
+          <strong>Galería</strong>
+          <div class="gallery" style="margin-top:10px">
+            <img src="https://media.istockphoto.com/id/1485705128/es/foto/feliz-libertad-y-sonrisa-con-la-mujer-en-la-naturaleza-para-la-paz-la-relajaci%C3%B3n-y-la-juventud.jpg?s=612x612&w=0&k=20&c=7VjYgUDhLE5BAPa-DtSQ9LTJKSWW_8oYfqws3tKLLnA=" alt="">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=800&auto=format&fit=crop" alt="">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px">
+      <h4 style="margin:0 0 12px">Más ejemplos</h4>
+      <div class="examples">
+        <div class="example-card reveal"><img src="https://www.revista-ballesol.com/wp-content/uploads/2022/05/residencia-de-ancianos.webp" alt=""><div class="tag">Familia</div></div>
+        <div class="example-card reveal"><img src="https://images.unsplash.com/photo-1541698444083-023c97d3f4b6?q=80&w=1200&auto=format&fit=crop" alt=""><div class="tag">Momentos</div></div>
+        <div class="example-card reveal"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt=""><div class="tag">Naturaleza</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section reveal">
+    <h3 style="margin:0 0 12px">Contacto</h3>
+    <div class="form-grid">
+      <form id="contactForm" class="card" onsubmit="return false;">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="form-input">
+            <label class="small">Tu nombre</label>
+            <input class="input" id="senderName" placeholder="Ej. Stiven Beltrán" required>
+          </div>
+
+          <div class="form-input">
+            <label class="small">Nombre de la persona homenajeada</label>
+            <input class="input" id="deceasedName" placeholder="Ej. María Gómez" required>
+          </div>
+
+          <div style="display:flex;gap:10px">
+            <div style="flex:1">
+              <label class="small">Años (ej. 1948 — 2024)</label>
+              <input class="input" id="years" placeholder="1948 — 2024">
+            </div>
+            <div style="width:160px">
+              <label class="small">Relación</label>
+              <select id="relation" class="input">
+                <option>Familiar</option>
+                <option>Amigo</option>
+                <option>Otros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-input">
+            <label class="small">Mensaje breve</label>
+            <textarea id="message" placeholder="Escribe un mensaje o petición breve..." ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button id="sendWhats" class="send-btn" type="button">Enviar a WhatsApp</button>
+            <button id="openLink" class="secondary" type="button">Abrir chat directo</button>
+            <div style="margin-left:auto" class="small-note">También puedes usar el botón principal de WhatsApp.</div>
+          </div>
+        </div>
+      </form>
+
+      <div class="card" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <h4 style="margin:0">¿Qué recibirás?</h4>
+        <p class="small">Al enviar, recibirás atención personalizada para crear el perfil, opciones de diseño del QR y pasos para la instalación física.</p>
+        <div style="width:100%;display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+          <div class="small-pill">Soporte humano</div>
+          <div class="small-pill">Privacidad</div>
+          <div class="small-pill">Asesoría</div>
+        </div>
+
+        <div style="margin-top:18px;width:100%">
+          <strong style="display:block;margin-bottom:8px">Upload (para más tarde)</strong>
+          <input type="file" id="fileUpload" class="input">
+          <div class="small-note" style="margin-top:8px">Puedes cargar fotos ahora o después al crear el perfil. (El archivo no se sube aquí; se guardará cuando configuremos el perfil real.)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;gap:10px;align-items:center">
+          <div class="logo" style="width:44px;height:44">
+            <img src="https://i.ibb.co/JWDcNr3g/Chat-GPT-Image-6-jun-2025-12-26-02.png" alt="Logo Personalizado">
+            <div class="logo-mark" style="width:20px;height:20"></div>
+          </div>
+          <div>
+            <div style="font-weight:800">Memories QR</div>
+            <div style="font-size:13px;color:var(--muted-text)">Preservando recuerdos</div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--muted-text)">© <span id="year"></span> Memories QR</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+        <a href="https://wa.me/qr/ZP5DXJYRD5KVE1" target="_blank" rel="noopener">WhatsApp</a>
+        <div style="font-size:13px;color:var(--muted-text)">Política de privacidad · Términos</div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=> {
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target) }
+  });
+},{threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+
+document.querySelectorAll('a, button').forEach(el=>{
+  el.addEventListener('pointerenter', ()=> el.style.transform='translateY(-3px)');
+  el.addEventListener('pointerleave', ()=> el.style.transform='translateY(0)');
+});
+
+document.getElementById('open-contact').addEventListener('click', ()=> {
+  document.getElementById('contacto').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+const sendBtn = document.getElementById('sendWhats');
+const openLinkBtn = document.getElementById('openLink');
+const providedWhats = 'https://wa.me/qr/ZP5DXJYRD5KVE1';
+
+openLinkBtn.addEventListener('click', ()=> {
+  window.open(providedWhats, '_blank', 'noopener');
+});
+
+sendBtn.addEventListener('click', ()=> {
+  const sender = document.getElementById('senderName').value.trim();
+  const deceased = document.getElementById('deceasedName').value.trim();
+  const years = document.getElementById('years').value.trim();
+  const relation = document.getElementById('relation').value;
+  const message = document.getElementById('message').value.trim();
+
+  if(!sender || !deceased){
+    alert('Por favor completa tu nombre y el nombre de la persona homenajeada.');
+    return;
+  }
+
+  let text = Hola, soy ${sender}. Me gustaría crear un perfil conmemorativo para ${deceased}.;
+  if(years) text += ` (${years}).`;
+  if(relation) text += ` Relación: ${relation}.`;
+  if(message) text += ` Mensaje: ${message}`;
+  text += ' ¿Podrían ayudarme con los siguientes pasos?';
+
+  const encoded = encodeURIComponent(text);
+  const waUrl = https://wa.me/?text=${encoded};
+  window.open(waUrl, '_blank', 'noopener');
+});
+
+/* Smooth micro-floating subtle parallax on hero image for scroll */
+(function(){
+  const heroVisual = document.querySelector('.hero-visual img');
+  if(!heroVisual) return;
+  window.addEventListener('scroll', ()=> {
+    const rect = heroVisual.getBoundingClientRect();
+    const mid = window.innerHeight/2;
+    const diff = (rect.top - mid) * -0.02;
+    heroVisual.style.transform = translateY(${diff}px) scale(1.02);
+    heroVisual.style.transition = 'transform .15s linear';
+  }, {passive:true});
+})();
+
+/* Accessibility: allow enter key on menu-toggle to focus nav (simple) */
+const menuToggle = document.querySelector('.menu-toggle');
+menuToggle && menuToggle.addEventListener('click', ()=> {
+  const nav = document.querySelector('.nav');
+  if(nav.style.display === 'flex') nav.style.display = 'none'; else nav.style.display = 'flex';
+});
+</script>
+</body>
+</html>
